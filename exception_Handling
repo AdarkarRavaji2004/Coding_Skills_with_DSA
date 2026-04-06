@@ -1,0 +1,111 @@
+# n1 = int(input("Enter first value :"))
+# n2 = int(input("Enter second value :"))
+# try:
+#     print(n1/n2)
+# except:
+#     print("Can't divide by zero")
+# print("To be continue")
+
+#--------------------------------------------------------------------------------------------
+
+# try:
+#     n1 = int(input("Enter first value :"))
+#     n2 = int(input("Enter second value :"))
+#     print(n1/n2)
+# except ZeroDivisionError:
+#     print("Can't divide by zero.....")
+# except ValueError:
+#     print("Enter only intger value....")
+# print("To be continue")
+
+#---------------------------------------------------------------------------------------------
+
+# try:
+#     n1 = int(input("Enter first value :"))
+#     n2 = int(input("Enter second value :"))
+#     print(n1/n2)
+# except (ValueError,ZeroDivisionError) as message:
+#     print(message)
+
+#--------------------------------------------------------------
+
+# try:
+#     n1 = int(input("Enter first value :"))
+#     n2 = int(input("Enter second value :"))
+#     print(n1/n2)
+# except (ValueError,ZeroDivisionError) as message:
+#     print("Enter Correct Number :",message)
+# except:
+#     print("This is default part of except block")
+
+#-------------------------------------------------------------------------------------------
+
+# try:
+#     n1 = int(input("Enter first value :"))
+#     n2 = int(input("Enter second value :"))
+#     print(n1/n2)
+# except (ValueError,ZeroDivisionError) as message:
+#     print("Enter Correct Number :",message)
+# else:
+#     print("Everything is OK!") # execute if try block does not show error ,and if yes then it not execute
+
+#-------------------------
+
+# try:
+#     n1 = int(input("Enter first value :"))
+#     n2 = int(input("Enter second value :"))
+#     print(n1/n2)
+# except (ValueError,ZeroDivisionError) as message:
+#     print("Enter Correct Number :",message)
+# finally:
+#     print("I will always Executed") 
+
+#-------------------nested try except block-------------------------
+
+# try:
+#     n1 = int(input("Enter first value :"))
+#     n2 = int(input("Enter second value :"))
+#     try:
+#         print(n1/n2)
+#     except ZeroDivisionError as msg:
+#         print(msg)
+# except ValueError as msg:
+#     print(msg)
+ 
+#------------------------------------------------
+
+# try:
+#     n1 = int(input("Enter first value :"))
+#     n2 = int(input("Enter second value :"))
+#     print(n1/n2)
+# except (ZeroDivisionError, ValueError) as message:
+#     print(message)
+# else:
+#     print("there is no error in try block")
+# finally:
+#     print("i am finally block i always executed whether executed or not")
+
+#---------------------------------------------------------
+
+# list=[1,2,2,3,4,3,5]
+# dict={}
+# for i in list:
+#     if i in dict:
+#         dict[i]+=1
+#     else:
+#         dict[i]=1
+# print(dict)
+
+mylist = [5,7,8,3,7,8,9,2,3]
+newlist = []
+
+for i in range(len(mylist)):
+    count = 0
+    key = mylist[i]
+
+    j=i+1
+    while j<len(mylist):
+        if key == mylist[j]:
+            newlist.append(key)
+        j = j+1
+print(len(newlist))
